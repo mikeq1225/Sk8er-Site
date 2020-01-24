@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*body {
+  background-image: url("assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}*/
+body {
+  background-color: lightgrey;
+}
+
+div#container {
+  width: 1000px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+p {
+  text-transform: uppercase;
+  color: white;
+  border-right: dotted 3px white;
+  padding-right: 75px;
+}
+
+i {
+  font-size: 20px;
+  color: rgb(120, 130, 150);
+}
+div.box {
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  margin: 5px;
+  border-bottom: 5px solid rgb(120, 130, 150);
+}
+
+/*background: rgb(58, 79, 138);*/
