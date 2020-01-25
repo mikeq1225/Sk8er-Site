@@ -29,6 +29,12 @@ section {
   justify-content: flex-end;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 p#subscribe {
   text-transform: uppercase;
   font-size: 16px;
@@ -44,54 +50,53 @@ i {
   padding: 14px;
 }
 
-div.facebook,
-div.rss,
-div.twitter,
-div.youtube {
+.facebook,
+.rss,
+.twitter,
+.youtube {
   width: 50px;
   height: 50px;
   margin: 5px;
+}
+
+.box {
   border-bottom: 4px solid rgb(160, 160, 160);
 }
 
-div.facebook {
+.facebook {
   background: rgb(58, 79, 138);
 }
 
-div.rss {
+.rss {
   background: rgb(196, 130, 51);
 }
 
-div.twitter {
+.twitter {
   background: rgb(94, 132, 190);
 }
 
-div.youtube {
+.youtube {
   background: rgb(167, 45, 43);
 }
 
-ul.nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 li {
   list-style: none;
 }
 
-li.header {
+.header {
   color: white;
   font-size: 18px;
   width: 250px;
   padding: 8px;
   margin: 5px;
   text-align: center;
-
-  border-bottom: 5px solid rgb(160, 160, 160);
   background-color: rgb(169, 31, 44);
 }
 
@@ -101,13 +106,13 @@ a {
   text-align: center;
 }
 
-div.banner {
+.banner {
   width: auto;
   height: 300px;
   background-image: url("assets/top-image.png");
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 5px;
+  margin: 10px 5px 50px 5px;
   border: 8px solid white;
 }
 
@@ -117,28 +122,86 @@ div.skeleton:first-child {
 
 ul.main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "article1 article2 article3"
+    "image1 image2 image3"
+    "image4 image4 image3"
+    "boards boards boards"
+    "contact contact contact";
   grid-column-gap: 15px;
   grid-row-gap: 20px;
-  list-style-type: none;
-  padding: 0px;
-  margin: 30px 5px 15px 5px;
+
+  width: auto;
 }
 
-li.content {
+.lance,
+.rodney,
+.tommy,
+.steve {
+  min-height: 200px;
+  border: 5px solid white;
+}
+
+.tonyArticle {
+  grid-area: article1;
+}
+
+.rodneyArticle {
+  grid-area: article2;
+}
+
+.rayArticle {
+  grid-area: article3;
+}
+
+.lance {
+  grid-area: image1;
+}
+
+.rodney {
+  grid-area: image2;
+}
+
+.tommy {
+  grid-area: image3;
+}
+
+.steve {
+  grid-area: image4;
+}
+
+.boards {
+  grid-area: boards;
+  height: 200px;
   background-color: white;
 }
 
-.box {
-  border-bottom: 4px solid rgb(160, 160, 160);
+.contacts {
+  grid-area: contact;
+}
+
+.content {
+  background-color: rgb(246, 246, 246);
+  padding: 20px 35px;
+}
+
+.more {
+  color: rgb(188, 55, 66);
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 h2 {
   font-weight: normal;
 }
 
-p.more {
-  color: rgb(188, 55, 66);
-  text-align: center;
-  font-weight: bold;
+.text {
+  font-size: 15px;
+  padding: 0px 0px 30px 0px;
+  color: rgb(100, 100, 100);
+  word-spacing: 2px;
+}
+.date {
+  color: rgb(180 180 180);
 }
