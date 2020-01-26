@@ -17,31 +17,31 @@
     <div id="container">
       <section>
         <p id="subscribe">subscribe</p>
-        <div class="facebook box">
+        <div class="facebook underline">
           <i class="fab fa-facebook-f"></i>
         </div>
-        <div class="rss box">
+        <div class="rss underline">
           <i class="fas fa-rss"></i>
         </div>
-        <div class="twitter box">
+        <div class="twitter underline">
           <i class="fab fa-twitter"></i>
         </div>
-        <div class="youtube box">
+        <div class="youtube underline">
           <i class="fab fa-youtube"></i>
         </div>
       </section>
       <header>
         <ul class="nav">
-          <li class="header box">
+          <li class="header underline">
             <a href="">- SK8T NEWS -</a>
           </li>
-          <li class="header box">
+          <li class="header underline">
             <a href="">- SKATEBOARDERS -</a>
           </li>
-          <li class="header box">
+          <li class="header underline">
             <a href="">- BOARD DESIGN -</a>
           </li>
-          <li class="header box">
+          <li class="header underline">
             <a href="">- CONTACT -</a>
           </li>
         </ul>
@@ -52,7 +52,7 @@
         </div>
       </div>
       <ul class="main">
-        <li class="tonyArticle content box">
+        <li class="tonyArticle content underline">
           <h2>Tony Hawk Foundation Raises Big Money At Celeb Fundraiser</h2>
           <p class="date">October 10, 2013</p>
           <p class="text">
@@ -61,9 +61,9 @@
             Stand Up for Skateparks Benefit Presented by SLS Hotel & Casino Las
             Vegas on Saturday at the Green Acres Estate in Beverly Hills.
           </p>
-          <p class="more">[ READ MORE ]</p>
+          <p><a class="more" href="">[ READ MORE ]</a></p>
         </li>
-        <li class="rodneyArticle content box">
+        <li class="rodneyArticle content underline">
           <h2>Rodney Mullen: Pop an ollie and innovate! (TED Talk)</h2>
           <p class="date">March 10, 2013</p>
           <p class="text">
@@ -73,9 +73,9 @@
             environments it plays in drive the creation of new tricks --
             fostering...
           </p>
-          <p class="more">[ READ MORE ]</p>
+          <p><a class="more" href="">[ READ MORE ]<a><p>
         </li>
-        <li class="rayArticle content box">
+        <li class="rayArticle content underline">
           <h2>Ray Barbee Talks 'Ban This'</h2>
           <p class="date">Oct. 4, 2013</p>
           <p class="text">
@@ -85,21 +85,36 @@
             down with Ray Barbee, one of the smoothest guys to ever step on a
             skateboard and Chris' childhood idol...
           </p>
-          <p class="more">[ READ MORE ]</p>
+          <p><a class="more" href="">[ READ MORE ]</a></p>
         </li>
-        <li class="lance box">
-          <img src="assets/sk8er-4.png" alt="Picture of Lance Mountain" />
+        <li class="lance underline">
+          <div class="nameText">
+            <h1>lance mountain</h1>
+          </div>
+          <!--<img src="assets/sk8er-4.png" alt="Picture of Lance Mountain" />-->
         </li>
-        <li class="rodney box">
-          <img src="assets/sk8er-3.png" alt="Picture of Rodney Mullen" />
+        <li class="rodney underline">
+          <div class="nameText">
+            <h1>rodney mullen</h1>
+          </div>
+          <!--<img src="assets/sk8er-3.png" alt="Picture of Rodney Mullen" />-->
         </li>
-        <li class="tommy box">
-          <img src="assets/sk8er-2.png" alt="Picture of Tommy Guerrero" />
+        <li class="tommy underline">
+          <div class="nameText">
+            <h1>tommy guerrero</h1>
+          </div>
+          <!--<img src="assets/sk8er-2.png" alt="Picture of Tommy Guerrero" />
+        </li>-->
         </li>
-        <li class="steve box">
-          <img src="assets/sk8er-1.png" alt="Picture of Steve Caballero" />
+
+        <li class="steve underline">
+          <div class="nameText">
+            <h1>steve caballero</h1>
+          </div>
+          <!--img src="assets/sk8er-1.png" alt="Picture of Steve Caballero"
+          />-->
         </li>
-        <li class="boards box">
+        <li class="boards underline">
           <img src="assets/sk8-3.png" alt="Panda skateboard" />
           <img src="assets/sk8-4.png" alt="Monkey skateboard" />
           <img src="assets/sk8-5.png" alt="mMessage Board skateboard" />
@@ -111,7 +126,7 @@
           <img src="assets/sk8-2.png" alt="Elephant skateboard" />
           <img src="assets/sk8-1.png" alt="Skull skateboard" />
         </li>
-        <li class="contacts box">
+        <li class="contacts underline">
           <h3>Contact Us for More Information</h3>
           <p class="latin">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -119,7 +134,17 @@
             at vehicula congue, vehicula nec tellus. Morbi dignissim rutrum
             lorem at tincidunt.
           </p>
-          <form class="info" action="" method=""></form>
+          <form class="info" action="" method="">
+            <fieldset>
+              <label for="name"></label>
+              <input type="text" id="name" name="name" placeholder="name">
+              <label for="email"></label>   
+              <input type="email" id="email" name="email" placeholder="email">
+              <label for="message"></label>
+              <textarea id="message" name="message"></textarea>      
+            </fieldset>
+            <input type="submit" id="submit">
+          </form>
         </li>
       </ul>
     </div>
