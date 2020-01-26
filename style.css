@@ -7,7 +7,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+/* Styling for background image for entire page */
 /*body {
   background-image: url("assets/bg.jpg");
   background-size: cover;
@@ -19,20 +19,32 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Sets the style for div that centers content on page */
 div#container {
   width: 1000px;
   margin: auto;
 }
 
-section {
-  display: flex;
-  justify-content: flex-end;
-}
-
+/* removes default styling from lists */
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* removes text decoration from all anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* Styling for social media section at top*/
+section {
+  display: flex;
+  justify-content: flex-end;
 }
 
 p#subscribe {
@@ -79,15 +91,12 @@ i {
   background: rgb(167, 45, 43);
 }
 
+/* Styling for the navigation bar */
 .nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 5px;
   align-items: center;
-}
-
-li {
-  list-style: none;
 }
 
 .header {
@@ -103,26 +112,39 @@ li.header > a {
   color: white;
 }
 
-a {
-  text-decoration: none;
-  text-align: center;
-}
-
+/* Styling for all images in banner */
 .banner {
   width: auto;
   height: 350px;
-  background-image: url(assets/grid.png), url(assets/top-image.png);
-  background-size: 141%, 150%;
+  background-image: url(assets/top-image.png);
+  background-size: 155%;
   background-repeat: no-repeat;
-  background-position: 25% 25%;
+  background-position: 38% 25%;
   margin: 10px 0px 50px 0px;
   border: 8px solid white;
+  position: relative;
 }
 
-div.skeleton:first-child {
-  padding: 45px 0px 0px 20px;
+div.banner::after {
+  content: "";
+  background: url(assets/grid.png);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
 }
 
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 2;
+}
+
+/* Main grid layout */
 ul.main {
   display: grid;
   grid-template-areas:
@@ -135,14 +157,7 @@ ul.main {
   grid-row-gap: 20px;
 }
 
-.lance,
-.rodney,
-.tommy,
-.steve {
-  min-height: 240px;
-  border: 5px solid white;
-}
-
+/* Styling for articles */
 .tonyArticle {
   grid-area: article1;
   position: relative;
@@ -156,72 +171,6 @@ ul.main {
 .rayArticle {
   grid-area: article3;
   position: relative;
-}
-
-.lance {
-  grid-area: image1;
-  background-image: url("assets/sk8er-4.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 135%;
-  background-position: 80% 10%;
-  position: relative;
-}
-
-.rodney {
-  grid-area: image2;
-  background-image: url("assets/sk8er-3.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 140%;
-  position: relative;
-}
-
-.tommy {
-  grid-area: image3;
-  background-image: url("assets/sk8er-2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 80%, 0%;
-  position: relative;
-}
-
-.steve {
-  grid-area: image4;
-  background-image: url("assets/sk8er-1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 108%;
-  background-position: 0% 75%;
-  position: relative;
-}
-
-.nameText {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 17px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.boards {
-  grid-area: boards;
-  min-height: 210px;
-  border: 14px solid white;
-  background-color: white;
-}
-
-li.boards.underline {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.contacts {
-  grid-area: contact;
 }
 
 .content {
@@ -241,6 +190,7 @@ li.boards.underline {
 
 h2 {
   font-weight: normal;
+  font-size: 25px;
 }
 
 .text {
@@ -253,18 +203,135 @@ h2 {
   color: rgb(180 180 180);
 }
 
-.contacts {
-  background-color: white;
-  display: grid;
-  grid-template-areas: 1fr 1fr;
+/* Styling for photos of skateboarders */
+.lance,
+.rodney,
+.tommy,
+.steve {
+  min-height: 240px;
+  border: 5px solid white;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-fieldset {
-  border-style: none;
-  display: block;
+.lance {
+  grid-area: image1;
+  background-image: url("assets/sk8er-4.png");
+  background-size: 135%;
+  background-position: 80% 10%;
+  position: relative;
 }
+
+.rodney {
+  grid-area: image2;
+  background-image: url("assets/sk8er-3.png");
+  background-size: 140%;
+  position: relative;
+}
+
+.tommy {
+  grid-area: image3;
+  background-image: url("assets/sk8er-2.png");
+  background-position: 80%, 0%;
+  position: relative;
+}
+
+.steve {
+  grid-area: image4;
+  background-image: url("assets/sk8er-1.png");
+  background-size: 108%;
+  background-position: 0% 75%;
+  position: relative;
+}
+
+.nameText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Styling for pictures of skateboards */
+.boards {
+  grid-area: boards;
+  min-height: 300px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Sytling for contacts section */
+.contacts {
+  grid-area: contact;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  min-height: 300px;
+  background-color: white;
+}
+
+h3 {
+  font-size: 28px;
+  border: 1px solid black;
+}
+
+.latin {
+  word-spacing: 2px;
+  line-height: 30px;
+  color: rgb(100, 100, 100);
+  border: 1px solid black;
+}
+
+.social {
+  border: 1px solid black;
+}
+
+form {
+  border: 1px solid black;
+  display: block;
+  text-align: right;
+}
+
+input {
+  height: 15px;
+  width: 450px;
+  margin: 10px 15px 5px 15px;
+  padding: 20px 15px;
+}
+
+textarea {
+  height: 100px;
+  width: 450px;
+  margin: 10px 15px 30px 15px;
+  padding: 15px 15px;
+}
+
+input,
+textarea {
+  border-top: 4px solid rgb(160, 160, 160);
+  border-left: 4px solid rgb(160, 160, 160);
+}
+
 input#submit {
   background-color: rgb(169, 31, 44);
-  color: white;
-  width: 100px;
+  color: rgb(230, 230, 230);
+  width: 250px;
+  height: 40px;
+  text-transform: uppercase;
+  font-size: 18px;
+  border: none;
+  padding: 0;
+}
+
+::placeholder {
+  color: rgb(200, 200, 200);
+  font-size: 18px;
+  text-transform: uppercase;
 }
