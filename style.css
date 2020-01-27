@@ -385,3 +385,37 @@ input#submit {
   font-size: 18px;
   text-transform: uppercase;
 }
+
+/* Responisve CSS */
+
+@media screen and (max-width: 600px) {
+  div#container {
+    width: 600px;
+    margin: 0;
+  }
+  section {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .banner {
+    height: 250px;
+    margin: 10px;
+  }
+  .logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    z-index: 2;
+  }
+  ul.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
