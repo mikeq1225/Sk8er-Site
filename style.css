@@ -8,14 +8,10 @@ html {
   box-sizing: inherit;
 }
 /* Styling for background image for entire page */
-/*body {
+body {
   background-image: url("assets/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
-}*/
-body {
-  background-color: lightgrey;
   font-family: Arial, sans-serif;
 }
 
@@ -58,7 +54,7 @@ p#subscribe {
 i {
   font-size: 20px;
   color: rgb(190, 190, 190);
-  text-align: center center;
+  text-align: center;
   padding: 14px;
 }
 
@@ -222,6 +218,33 @@ h2 {
   position: relative;
 }
 
+li.lance::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 45.5px 0 45.5px 40px;
+  border-color: transparent transparent transparent rgb(165, 53, 52);
+  position: absolute;
+  bottom: 75px;
+  left: -50px;
+}
+
+li.lance::after {
+  content: "SKATEBOARDERS";
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+  padding: 33px 8px;
+  width: 170px;
+  height: 94px;
+  background: rgb(165, 53, 52);
+  border-bottom: 3px solid rgb(160, 160, 160);
+  position: absolute;
+  bottom: 72px;
+  left: -220px;
+}
+
 .rodney {
   grid-area: image2;
   background-image: url("assets/sk8er-3.png");
@@ -267,7 +290,7 @@ h2 {
   align-items: center;
 }
 
-/* Sytling for contacts section */
+/* Sytling for left side of contacts section */
 .contacts {
   grid-area: contact;
   display: grid;
@@ -279,22 +302,48 @@ h2 {
 
 h3 {
   font-size: 28px;
-  border: 1px solid black;
+  color: rgb(85, 85, 85);
+  font-weight: normal;
+  margin: 10px 0px 10px 25px;
 }
 
 .latin {
   word-spacing: 2px;
-  line-height: 30px;
+  line-height: 25px;
   color: rgb(100, 100, 100);
-  border: 1px solid black;
+  margin-left: 25px;
 }
 
 .social {
-  border: 1px solid black;
+  margin-left: 25px;
 }
 
+.social > i {
+  height: 30px;
+  width: 30px;
+  font-size: 16px;
+  margin: 10px 1px;
+  padding: 7px 8px 5px 5px;
+}
+
+.fbBottom {
+  background-color: rgb(79, 79, 79);
+}
+
+.rssBottom {
+  background-color: rgb(173, 173, 173);
+}
+
+.twitBottom {
+  background-color: rgb(123, 123, 123);
+}
+
+.youBottom {
+  background-color: rgb(117, 117, 117);
+}
+
+/* Styling for form section of contacts grid */
 form {
-  border: 1px solid black;
   display: block;
   text-align: right;
 }
@@ -302,14 +351,14 @@ form {
 input {
   height: 15px;
   width: 450px;
-  margin: 10px 15px 5px 15px;
+  margin: 10px 25px 5px 15px;
   padding: 20px 15px;
 }
 
 textarea {
   height: 100px;
   width: 450px;
-  margin: 10px 15px 30px 15px;
+  margin: 10px 25px 20px 15px;
   padding: 15px 15px;
 }
 
@@ -328,6 +377,7 @@ input#submit {
   font-size: 18px;
   border: none;
   padding: 0;
+  margin: 0px 25px 25px 0px;
 }
 
 ::placeholder {
